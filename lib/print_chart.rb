@@ -11,9 +11,11 @@ rescue LoadError
   # production
 end
 
+$redis     ||= Redis.new(host: ENV['REDIS_HOST'], port: ENV['REDIS_PORT'])
+Resque.redis = $redis
+
 class PrintChart
   @queue = :print_chart
-  $redis = Redis.new(host: ENV['REDIS_HOST'], port: ENV['REDIS_PORT'])
 
   def self.perform(chart_id, printer=nil)
     job = new(chart_id, printer)
