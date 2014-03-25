@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    print_chart (0.0.1)
+      resque (~> 1.25.2)
+      rest-client (~> 1.6.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,10 +56,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   dotenv
   minitest
   minitest-stub_any_instance
   minitest-vcr
-  resque (~> 1.25.2)
-  rest-client (~> 1.6.7)
+  print_chart!
   webmock

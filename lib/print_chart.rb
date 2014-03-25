@@ -1,10 +1,15 @@
 require 'bundler/setup'
 require 'tmpdir'
-require 'dotenv'
 require 'resque'
 require 'rest_client'
 
-Dotenv.load
+begin
+  require 'dotenv'
+  Dotenv.load
+rescue LoadError
+  # Dotenv makes it easy for us to work in development, but we don't need it in
+  # production
+end
 
 class PrintChart
   @queue = :print_chart

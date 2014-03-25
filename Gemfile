@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'resque', '~> 1.25.2'
-gem 'rest-client', '~> 1.6.7'
+gemspec
 
 group :development do
   gem 'dotenv'
