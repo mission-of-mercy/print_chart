@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir[ "test/*_test.rb" ]
 
   s.add_dependency "resque", "~> 1.25.2"
-  s.add_dependency "rest-client", "~> 1.6.7"
+  s.add_dependency "rest-client", "~> 1.7.3"
 
   s.add_development_dependency "bundler"
 end
